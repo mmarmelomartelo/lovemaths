@@ -126,7 +126,7 @@ body {
 
 .btn--blue:active,
 .btn--blue:hover {
-    background-color: darkblue;
+    background-color: black;
     color: white;
 }
 
@@ -194,6 +194,7 @@ body {
     .btn--big::after {
         font-size: 0.6rem;
         left: -0.7rem;
+        /*top: 0.6rem; */
     }
 
     .question-area {
