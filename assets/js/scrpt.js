@@ -11,12 +11,12 @@ document.addEventListener("DOMContentLoaded", function() {
                 let gameType = this.getAttribute("data-type");
                 runGame(gameType);
             }
-        })
+        });
     }
 
     runGame("addition");
 
-})
+});
 
 /**The main game "loop", called when the script is first loaded
  * and after the user´s answer has been processed
@@ -44,8 +44,10 @@ function checkAnswer() {
 
     if (isCorrect) {
         alert("Hej! You got it right! ;-D");
+        incrementScore();
     } else {
         alert(`Hej! do your Math! You answered ${userAnswer}, but the correct anwer was ${calculatedAnswer [0]}!`);
+        incrementWrongAnswer();
     }
 
     runGame(calculateCorrectAnswer[1]);
@@ -68,11 +70,24 @@ function calculateCorrectAnswer() {
     }
 }
 
+/**
+ * Gets the current score from DOM and increment by 1
+ */
 function incrementScore() {
+
+    let oldScore = parseInt(document.getElementById("score").innerText);
+    document.getElementById("score").innerText = ++oldScore;
 
 }
 
+/**
+ * Gets the current incorrect score from DOM and increment by 1
+ */
 function incrementWrongAnswer() {
+
+    let oldScore = parseInt(document.getElementById("incorrect").innerText);
+    document.getElementById("incorrect").innerText = ++oldScore;
+
 
 }
 
