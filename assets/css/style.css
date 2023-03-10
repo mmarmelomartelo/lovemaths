@@ -126,7 +126,7 @@ body {
 
 .btn--blue:active,
 .btn--blue:hover {
-    background-color: black;
+    background-color: darkblue;
     color: white;
 }
 
