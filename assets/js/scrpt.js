@@ -17,8 +17,8 @@ document.addEventListener("DOMContentLoaded", function() {
             checkAnswer();
         }
     })
-    // games = ["addition", "multiply", "subtract", "division"]
-    runGame();
+
+    runGame("addition");
 
 })
 
@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function() {
  */
 function runGame(gameType) {
 
-    document.getElementById("answer-box").value = "0";
+    document.getElementById("answer-box").value = "";
     document.getElementById("answer-box").focus();
 
     // Creates two random bumbers between 1 and 25
