@@ -18,9 +18,16 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     })
 
-    runGame("addition");
+    runGame(randomString);
 
 })
+
+/** Add a constant to randomize the default operator in the begin of game */
+
+const list = ["addition", "multiply", "subtract", "division"];
+list.sort(() => Math.random() - 0.5); // Randomize the order of elements in the array
+const randomString = list[0]; // Get the first (random) element from the array
+
 
 /**The main game "loop", called when the script is first loaded
  * and after the user´s answer has been processed
